@@ -12,11 +12,10 @@ class elevator():
         self.floor=floor
         self.name=f'第{name}部電梯'
 elevator_list=[elevator(random.choice(building),i) for i in range(1,random.randint(1,3)+1)] #有幾個電梯
-right=True
 print(f'你所在的大樓有{len(building)}層')
 print(f'本大樓有{len(elevator_list)}部電梯')
 now_location=0
-while right:
+while True:
     now_location=input('你在哪一層樓:')
     if now_location in building:
         break
@@ -28,7 +27,7 @@ else:
     button=['向上','向下']
 
 next_floor=''
-while right:
+while True:
     answer=input('你要向下還是向上: ')
     if answer in button:
         next_floor=input('你要去哪個樓層: ')
