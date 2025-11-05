@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<head>
+
+</head>
+<body>
+    <div>
+        <form action="sport.html" method="post">
+        <p><label >輸入名字
+        <input id="name" name="name" type="text"></label></p>
+
+        <p><label>輸入身高(cm)
+        <input id="height" name="height" type="number"></label></p>
+
+        <p><label>輸入體重(kg)
+        <input id="weight" name="weight" type="number"></label></p>
+        <p><button onclick="myConfirm()" type="submit"> 確認</button></p>
+        
+        </form>
+        <script>
+            var myConfirm = function(){
+                let height=parseFloat(document.getElementById('height').value);
+                let weight=parseFloat(document.getElementById('weight').value);
+    let bmi=weight/((height/100)**2)
+    
+    let answer = confirm('你的名字是'+document.getElementById('name').value+'\n'
+    +'你的身高是'+height+'\n'
+    +'你的體重是'+weight+'\n'
+    +'你的BMI是'+ bmi.toFixed(2)+'\n'
+    +'是否正確?'
+);
+
+    if(!answer){
+      alert('請重新輸入');
+    }else{
+      if (bmi>=35){
+        alert('重度肥胖')
+    }
+    else if (bmi>=30){
+        alert('中度肥胖')
+    }
+    else if (bmi>=27){
+        alert('輕度肥胖')
+    }
+    else if (bmi>=24){
+        alert('過重')
+    }
+    else if (bmi>=18.5){
+        alert('正常')
+    }
+    else if (bmi<18.5){
+        alert('過輕')
+    }
+    }
+    //  location.href = 'https://zh.wikipedia.org/zh-tw/%E5%85%B3%E8%A5%BF%E5%A4%A7%E5%AD%A6#%E5%A4%A7%E5%AD%B8%E9%83%A8';
+  }
+
+        </script>
+        
+    </div>
+</body>
+</html>
