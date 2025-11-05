@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<head>
+
+</head>
+<body>
+    <div>
+        <form action="leauge.html" method="get">
+            <p><h3>請選擇你喜歡的運動</h3></p>
+        排球 <input id="volleyball"     name="sport" type="checkbox" value="排球">|
+        足球 <input id="soccer"         name="sport" type="checkbox" value="足球">|
+        籃球 <input id="basketball"     name="sport" type="checkbox" value="籃球">|
+        羽球 <input id="badminton"      name="sport" type="checkbox" value="羽毛球">|
+        網球 <input id="tennis"         name="sport" type="checkbox" value="網球">|
+        桌球 <input id="tabletennis"    name="sport" type="checkbox" value="桌球">|
+        撞球 <input id="billiards"      name="sport" type="checkbox" value="撞球">|
+        游泳 <input id="swimming"       name="sport" type="checkbox" value="游泳">|
+        跑步 <input id="running"        name="sport" type="checkbox" value="跑步">|
+        滑板 <input id="skateboard"     name="sport" type="checkbox" value="滑板">|
+        格鬥 <input id="martialarts"    name="sport" type="checkbox" value="格鬥">|
+        拳擊 <input id="boxing"         name="sport" type="checkbox" value="拳擊">|
+        其他 <input id="other"          name="sport" type="checkbox" value="其他">|
+        沒有 <input id="None"           name="sport" type="checkbox" value="沒有">
+
+
+    </p>
+
+        <p><button onclick="myConfirm()" type="submit"> 確認</button></p>
+        
+        </form>
+        <script>
+           var myConfirm = function() {
+  // 找到所有被勾選的 checkbox
+  let items = document.querySelectorAll('input[name="sport"]:checked');
+  
+  // 收集 value
+  let result = [];
+  items.forEach(item => {
+    result.push(item.value);
+  });
+
+  // 一次 alert
+  if(result.length > 0){
+    if (result.includes("其他")){
+        alert('看來你喜歡的運動很冷門喔')
+    }
+    else if(result.includes("沒有")){
+        alert('可惜你沒有體會運動的美好')
+    }
+    else{
+    alert("你選的運動：" + result.join(", "));
+  } 
+  }
+  else {
+    alert("你沒有選任何運動");}
+}
+
+
+        </script>
+        
+    </div>
+</body>
+</html>
