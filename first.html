@@ -13,7 +13,7 @@
 
         <p><label>輸入體重(kg)
         <input id="weight" name="weight" type="number"></label></p>
-        <p><button onclick="myConfirm()" type="submit"> 確認</button></p>
+        <p><button onclick="myConfirm()" type="button"> 確認</button></p>
         
         </form>
         <script>
@@ -31,7 +31,9 @@
 
     if(!answer){
       alert('請重新輸入');
-    }else{
+        return
+    }
+    else{
       if (bmi>=35){
         alert('重度肥胖')
     }
@@ -50,8 +52,9 @@
     else if (bmi<18.5){
         alert('過輕')
     }
+    document.querySelector('form').submit();
     }
-    window.location.href = 'sport.html';
+    //window.location.href = 'sport.html';
   }
 
         </script>
