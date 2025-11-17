@@ -3,31 +3,28 @@
 
 </head>
 <body>
-    <div>
+    <div id="message">
         <form method="get">
         <p>你有看體育聯賽的習慣嗎?</p>
         有  <input id="yes" name="leauge" type="radio" value="有">|
         沒有<input id="no" name="leauge" type="radio" value="沒有">
-        <p><button onclick="myConfirm()" type="submit"> 確認</button></p>
+        <p><button onclick="myConfirm()" type="button"> 確認</button></p>
         </form>
         <script>
         var myConfirm = function() {
   let choice = document.querySelector('input[name="leauge"]:checked');
   if(choice){
     alert('謝謝參與');
-    document.write('掰掰')  
+    document.getElementById('message').textContent = '掰掰';
+
   } else {
     alert("你還沒選啦");
   }
-          
+  
 }
 
         </script>
         
     </div>
 </body>
-
 </html>
-
-
-
