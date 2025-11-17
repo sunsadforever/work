@@ -24,7 +24,7 @@
 
     </p>
 
-        <p><button onclick="myConfirm()" type="submit"> 確認</button></p>
+        <p><button onclick="myConfirm()" type="button"> 確認</button></p>
         
         </form>
         <script>
@@ -51,7 +51,10 @@
   } 
   }
   else {
-    alert("你沒有選任何運動");}
+    alert("你沒有選任何運動");
+    return;
+}
+document.querySelector('form').submit();
 }
 
 
@@ -59,5 +62,4 @@
         
     </div>
 </body>
-
 </html>
