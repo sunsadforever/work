@@ -28,12 +28,14 @@
     +'你的BMI是'+ bmi.toFixed(2)+'\n'
     +'是否正確?'
 );
-
+    if (!name || isNaN(height) || isNaN(weight)) {
+                alert('請完整輸入資料');
+                return;
+            }            
     if(!answer){
       alert('請重新輸入');
-        return
-    }
-    else{
+      return;
+    }else{
       if (bmi>=35){
         alert('重度肥胖')
     }
@@ -52,9 +54,9 @@
     else if (bmi<18.5){
         alert('過輕')
     }
-    document.querySelector('form').submit();
     }
-    //window.location.href = 'sport.html';
+    document.querySelector('form').submit();
+    
   }
 
         </script>
