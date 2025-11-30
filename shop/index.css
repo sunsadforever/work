@@ -1,0 +1,122 @@
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&family=Noto+Serif+TC:wght@300;500;700&display=swap');
+
+table {
+    border-collapse: separate;
+    border-spacing: 0 15px; /* 行距 */
+    width: 70%;
+    margin: 0 auto;
+}
+th, td {
+    padding: 15px 20px;
+    text-align: center;
+}
+th {
+    font-size: 1.1em;
+    color: #bfa46f; /* 金色表頭 */
+    border-bottom: 2px solid #bfa46f;
+    background-color: pink;
+}
+td {
+    font-size: 1em;
+    color: #333;
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0 3px 6px rgba(0,0,0,0.1);
+}
+button {
+    background: #bfa46f;
+    color: #fff;
+    border: none;
+    padding: 8px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: 0.3s;
+}
+button:hover {
+    background: #a8895d;
+}
+
+/* ⭐只加這個來消除最上方空隙 */
+body {
+    font-family: 'Noto Serif TC', serif;
+    margin: 0;
+    padding: 0;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-color: black;
+    background-size: 120%; 
+    color: white;
+}
+
+.item {
+    margin: 0;
+    padding: 0;
+    background: gold;
+    text-align: center;
+    height: 100px;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Grid */
+.container {
+    display: grid;
+    width: 100%;
+    height: 100%;
+    grid-template-areas: 
+        "header header header"
+        "second second second"
+        "center center center"
+        "footer footer footer";
+    grid-template-columns: 120px 4fr 1fr;
+    grid-template-rows: 200px 600px 369px 80px;
+    border: none;
+    margin: 0;
+    padding: 0;
+    border: none;
+}
+
+.container > div {
+    margin: 0;
+    padding: 0;
+    border: none;
+}
+
+.header {
+    grid-area: header;
+    text-align: center;
+    position: fixed;    /* 固定在視窗 */
+    top: 0;             /* 緊貼最上方 */
+    left: 0;            /* 左邊對齊 */
+    width: 100%;
+    z-index: 999;
+    background-color: black;
+    transition-duration: 0.5s;
+    :visited{
+        color: white;
+    }
+    
+}
+.header:hover {
+    
+    background-color: rgba(255, 255, 255, 0.836);
+    color: black;
+    font-size: 20px;
+    :visited{
+        color: black;
+    }
+}
+.second { grid-area: second; 
+    text-align: center;
+    background-image: url('unnamed.jpg');
+    background-size: 50%;
+    background-repeat: no-repeat; 
+    background-position: center;     /* 置中 */
+    }
+.center { grid-area: center; }
+.footer { grid-area: footer; }
