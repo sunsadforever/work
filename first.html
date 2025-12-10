@@ -20,6 +20,8 @@
             var myConfirm = function(){
                 let height=parseFloat(document.getElementById('height').value);
                 let weight=parseFloat(document.getElementById('weight').value);
+                let name=document.getElementById('name').value.trim();
+
     let bmi=weight/((height/100)**2)
     
     let answer = confirm('你的名字是'+document.getElementById('name').value+'\n'
