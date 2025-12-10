@@ -30,7 +30,7 @@
     +'你的BMI是'+ bmi.toFixed(2)+'\n'
     +'是否正確?'
 );
-    if (!(name && isNaN(height) && isNaN(weight))) {
+    if (!(name && !isNaN(height) && !isNaN(weight))) {
                 alert('請完整輸入資料');
                 return;
             }            
